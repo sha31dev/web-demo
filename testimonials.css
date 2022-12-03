@@ -1,0 +1,29 @@
+.testimonials {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials_carousel {
+    overflow: inherit;
+}
+
+.testimonial__card {
+    box-shadow: 0 7px 25px 0 rgba(36, 50, 66, 0.075);
+    border-radius: 0.2rem;
+    color: #757575;
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    font-style: italic;
+    margin: 1.5rem;
+    padding: 2rem;
+}
+
+.testimonial__card_content {
+    margin-top: 0.5rem;
+}
+
+.testimonial__stars i {
+    color: #ffc400;
+}
