@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./parallex.css">
+    <link rel="stylesheet" href="./slideshow.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./testimonials.css">
+    <link rel="stylesheet" href="./services.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="./script.js"></script>
+
+    <title>Navbar</title>
+</head>
+<body>
+    <navbar class="navbar">
+        <input type="checkbox" id="navbar__checkbox" class="navbar__checkbox">
+        <label for="navbar__checkbox" class="navbar__toggle">
+            <svg class="navbar__toggle_icon" id="close" viewBox="0 0 512 512" title="close">
+                <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+            </svg>
+            
+            <svg class="navbar__toggle_icon" id="menu" viewBox="0 0 512 512" title="menu">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </label>
+
+        <ul class="navbar__list">
+            <li class="navbar__list_logo">
+                <span style="color: #ee2737;">T</span>ech<span style="color: #ee2737;">H</span>ub
+            </li>
+
+            <li class="navbar__list_item"><a class="navbar__list_link" href="#">About</a></li>
+
+            <li class="navbar__list_item">
+                <a class="navbar__list_link" href="#">Services &nbsp;</a>
+
+                <input type="checkbox" id="dropdown__checkbox" class="dropdown__checkbox">
+                <label for="dropdown__checkbox" class="dropdown__toggle">
+                    <svg class="navbar__dropdown_icon" id="chevron_down" viewBox="0 0 16 16" title="chevron_down">
+                        <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    
+                    <svg class="navbar__dropdown_icon" id="chevron_up" viewBox="0 0 16 16" title="chevron_up">
+                        <path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                    </svg>
+                </label>
+
+                <ul class="navbar__dropdown">
+                    <li class="navbar__dropdown_item"><a class="navbar__dropdown_link" href="#">Software Development</a></li>
+                    <li class="navbar__dropdown_item"><a class="navbar__dropdown_link" href="#">Graphics & Logo Designing</a></li>
+                    <li class="navbar__dropdown_item"><a class="navbar__dropdown_link" href="#">IT Consultation</a></li>
+                    <li class="navbar__dropdown_item"><a class="navbar__dropdown_link" href="#">Marketing & SEO</a></li>
+                    <li class="navbar__dropdown_item"><a class="navbar__dropdown_link" href="#">Data Analytics</a></li>
+                </ul>
+            </li>
+
+            <li class="navbar__list_item"><a class="navbar__list_link" href="#">Portfolio</a></li>
+            <li class="navbar__list_item"><a class="navbar__list_link" href="#">Careers</a></li>
+            <li class="navbar__list_item"><a class="navbar__list_link navbar__list_button" href="#">Contact</a></li>
+        </ul>
+    </navbar>
+
+    <section class="parallex">
+        <div class="parallex__container">
+            <h5>Design | Develop | Deliver</h5>
+            <h1>We build custom software that drives innovation and social impact.</h1>
+            <button>Let's Connect</button>
+        </div>
+    </section>
+
+
+    <section class="slideshow">
+        <h3>Our Clients</h3>
+        <div class="slideshow_carousel slider">
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image7.png"></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"></div>
+        </div>
+    </section>
+
+    <section class="">
+
+    </section>
+
+    <section class="services">
+        <h5>What we do</h5>
+        <h1>The entire cycle of software </br>development effortlessly handled for you</h1>
+        <p>
+            Whether you're a Fortune 500 or a startup in stealth mode - we give our </br>
+            clients the creative, technical and business talent they need to succeed.
+        </p>
+
+        <ul class="services_list">
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+        </ul>
+
+        <ul class="services_list">
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+        </ul>
+
+        <ul class="services_list">
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+
+            <li class="services__list_item">
+                <h5>App Development</h5>
+                <p>Engineer revolutionary products and software solutions with an experienced custom software development partner.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="">
+
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials_carousel slider">
+            <div class="testimonial__card slide">
+                <p>
+                    Whether it's a new development, update or maintenance - TechHub always shines through.
+                    Their turnaround time is always stellar, it's a pleasure to work with them.
+                </p>
+                
+                <div class="testimonial__card_content">
+                    <div>
+                        <p>Steven Roberts</p>
+                        <p>Marketing Manager, Systems Inc</p>
+                        <div class="testimonial__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial__card slide">
+                <p>
+                    Whether it's a new development, update or maintenance - TechHub always shines through.
+                    Their turnaround time is always stellar, it's a pleasure to work with them.
+                </p>
+                
+                <div class="testimonial__card_content">
+                    <div>
+                        <p>Steven Roberts</p>
+                        <p>Marketing Manager, Systems Inc</p>
+                        <div class="testimonial__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial__card slide">
+                <p>
+                    "Whether it's a new development, update or maintenance - TechHub always shines through.
+                    Their turnaround time is always stellar, it's a pleasure to work with them."
+                </p>
+                
+                <div class="testimonial__card_content">
+                    <div>
+                        <p>Steven Roberts</p>
+                        <p>Marketing Manager, Systems Inc</p>
+                        <div class="testimonial__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial__card slide">
+                <p>
+                    Whether it's a new development, update or maintenance - TechHub always shines through.
+                    Their turnaround time is always stellar, it's a pleasure to work with them.
+                </p>
+                
+                <div class="testimonial__card_content">
+                    <div>
+                        <p>Steven Roberts</p>
+                        <p>Marketing Manager, Systems Inc</p>
+                        <div class="testimonial__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial__card slide">
+                <p>
+                    Whether it's a new development, update or maintenance - TechHub always shines through.
+                    Their turnaround time is always stellar, it's a pleasure to work with them.
+                </p>
+                
+                <div class="testimonial__card_content">
+                    <div>
+                        <p>Steven Roberts</p>
+                        <p>Marketing Manager, Systems Inc</p>
+                        <div class="testimonial__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial__card slide">
+                <p>
+                    Whether it's a new development, update or maintenance - TechHub always shines through.
+                    Their turnaround time is always stellar, it's a pleasure to work with them.
+                </p>
+                
+                <div class="testimonial__card_content">
+                    <div>
+                        <p>Steven Roberts</p>
+                        <p>Marketing Manager, Systems Inc</p>
+                        <div class="testimonial__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__section">
+                <h5>Company</h5>
+
+                <ul class="footer__list">
+                    <li class="footer__list_item"><a href="#">About</a></li>
+                    <li class="footer__list_item"><a href="#">Clients</a></li>
+                    <li class="footer__list_item"><a href="#">Portfolio</a></li>
+                    <li class="footer__list_item"><a href="#">Careers</a></li>
+                    <li class="footer__list_item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h5>Services</h5>
+
+                <ul class="footer__list">
+                    <li class="footer__list_item"><a href="#">Software Development</a></li>
+                    <li class="footer__list_item"><a href="#">Media Planning</a></li>
+                    <li class="footer__list_item"><a href="#">Graphics & Logo Design</a></li>
+                    <li class="footer__list_item"><a href="#">Marketing & SEO</a></li>
+                    <li class="footer__list_item"><a href="#">IT Consultation</a></li>
+                    <li class="footer__list_item"><a href="#">Data Analytics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h5>Documentation</h5>
+
+                <ul class="footer__list">
+                    <li class="footer__list_item"><a href="#">Blog</a></li>
+                    <li class="footer__list_item"><a href="#">Policies</a></li>
+                    <li class="footer__list_item"><a href="#">Terms & Conditions</a></li>
+                    <li class="footer__list_item"><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h5>Stay Updated</h5>
+                <p>Subscribe to our newsletter to get our latest news.</p>
+                <form class="footer__form">
+                    <input type="email" name="email" placeholder="Enter email address">
+                    <input type="submit" value="Subscribe">
+                </form>
+
+                <ul class="footer__social_list">
+                    <li class="footer__social_list_item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li class="footer__social_list_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer__social_list_item"><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li class="footer__social_list_item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="footer__social_list_item"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
