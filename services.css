@@ -1,0 +1,56 @@
+.services {
+    background-color: #f5f5f5;
+    font-family: 'Ubuntu';
+    padding: 5rem 10rem;
+    width: 100%;
+}
+
+.services h1 {
+    color: #0d2234;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.services h5 {
+    color: #757575;
+}
+
+.services p {
+    color: #757575;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.services_list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.services__list_item {
+    background-color: #fff;
+    /* border: 2px solid #0d2234; */
+    border-radius: 0.2rem;
+    box-shadow: 0 7px 25px 0 rgba(36, 50, 66, 0.075);
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.services__list_item:hover {
+    cursor: pointer;
+}
+
+.services__list_item h5 {
+    color: #0d2234;
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 2rem;
+    }
+
+    .services_list {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background-color:#fff;
+    box-shadow: 0 2px 12px 0 rgba(36, 50, 66, 0.075);
+    font-family: "Ubuntu";
+    position: fixed;
+    width: 100vw;
+}
+
+
+.navbar__list {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    margin: 0 1rem;
+}
+
+.navbar__list_logo {
+    color: #0d2234;
+    cursor: pointer;
+    font-family: 'Ubuntu';
+    font-size: 28px;
+    font-weight: 800;
+    list-style: none;
+    margin-right: auto;
+    padding: 0.5rem 0rem;
+}
+
+.navbar__list_item {
+    align-items: center;
+    cursor: pointer;
+    display: block;
+    list-style: none;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.navbar__list_item:hover .navbar__dropdown,
+.navbar__list_item:focus .navbar__dropdown {
+    display: flex;
+}
+
+
+.navbar__list_link {
+    align-items: center;
+    color: #0d2234;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.navbar__list_button {
+    background-color: #0d2234;
+    border: 2px solid #fff;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.navbar__list_button:hover {
+    border: 2px solid #0d2234;
+}
+
+
+.navbar__checkbox {
+    display: none;
+}
+
+.navbar__toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 0.8rem;
+    top: 1.3rem;
+}
+
+.navbar__toggle_icon {
+    display: none;
+    fill: #0d2234;
+    width: 1rem;
+}
+
+
+.navbar__dropdown {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(36, 50, 66, 0.075);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    left: -1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 2rem;
+    transition: opacity 200ms ease-in-out;
+    width: 12rem;
+}
+
+.navbar__dropdown_item {
+    border-radius: 0.2rem;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 200ms ease-in-out;
+}
+
+.navbar__dropdown_item:hover,
+.navbar__dropdown_item:focus {
+    background-color: #e5e5e5;
+}
+
+.navbar__dropdown_icon {
+    display: none;
+    fill: #0d2234;
+    width: 0.6rem;
+}
+
+.navbar__dropdown_link {
+    color: #0d2234;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.dropdown__checkbox {
+    display: none;
+}
+
+.dropdown__toggle {
+    cursor: pointer;
+    margin-top: 0.1rem;
+    position: absolute;
+    right: 0;
+    top: 0.8rem;
+}
+
+
+#chevron_down {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .navbar__list_item {
+        display: none;
+    }
+
+    .navbar__list_item:hover .navbar__dropdown,
+    .navbar__list_item:focus .navbar__dropdown {
+        display: none;
+    }
+
+    .navbar__list_button {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar__dropdown {
+        box-shadow: none;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-top: 0.5rem;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar__dropdown_item {
+        border-radius: 0;
+        border-top: 1px solid #f5f5f5;
+    }
+
+    .navbar__dropdown_item:hover,
+    .navbar__dropdown_item:focus {
+        background-color: #fff;
+    }
+
+    .dropdown__toggle {
+        top: 0.8rem;
+    }
+
+    .navbar__list_button {
+        display: flex;
+        justify-content: center;
+    }
+
+    #menu {
+        display: block;
+    }
+
+
+    #navbar__checkbox:checked ~ ul.navbar__list {
+        flex-direction: column;
+        gap: 0px;
+        padding-bottom: 0.5rem;
+    }
+
+    #navbar__checkbox:checked ~ ul.navbar__list .navbar__list_item {
+        border-radius: 0.2rem;
+        border-top: 1px solid #f5f5f5;
+        display: block;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    #navbar__checkbox:checked ~ label.navbar__toggle #close {
+        display: block;
+    }
+
+    #navbar__checkbox:checked ~ label.navbar__toggle #menu {
+        display: none;
+    }
+
+
+    #dropdown__checkbox:checked ~ ul.navbar__dropdown {
+        display: flex;
+    }
+
+
+    #dropdown__checkbox:checked ~ label.dropdown__toggle #chevron_down {
+        display: none;
+    }
+
+    #dropdown__checkbox:checked ~ label.dropdown__toggle #chevron_up {
+        display: block;
+    }
+}
